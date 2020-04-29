@@ -11,7 +11,8 @@ namespace WSB_C_2020_Z1
             Console.WriteLine("Witam w kalkulatorze. " +
                 "\nProszę wybrać typ działania z listy: " +
                 "\n1 - Dodawanie" +
-                "\n2 - Odejmowanie");
+                "\n2 - Odejmowanie" +
+                "\n3 - Mnożenie");
             string opcja = Console.ReadLine();
 
             Console.WriteLine("\n\nProszę podać pierwszą liczbę do działania: ");
@@ -20,13 +21,22 @@ namespace WSB_C_2020_Z1
             Console.WriteLine("Proszę podać drugą liczbę: ");
             int liczba2 = int.Parse(Console.ReadLine());
 
-            if (opcja == "1")
+            switch (opcja)
             {
-                wynik = liczba1 + liczba2;
-            }
-            if (opcja == "2")
-            {
-                wynik = liczba1 - liczba2;
+                case "1":
+                    Console.WriteLine("Wybrano dodawanie.");
+                    wynik = liczba1 + liczba2;
+                    break;
+                case "2":
+                    Console.WriteLine("Wybrano odejmowanie.");
+                    wynik = liczba1 - liczba2;
+                    break;
+                case "3":
+                    Console.WriteLine("Wybrano mnożenie.");
+                    wynik = liczba1 * liczba2;
+                    break;
+                default:
+                    break;
             }
 
             Console.WriteLine("Wynik działania to: " + wynik);
