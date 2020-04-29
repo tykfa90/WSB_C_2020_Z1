@@ -7,16 +7,16 @@ namespace WSB_C_2020_Z1
     {
         static void Main(string[] args)
         {
-            BigInteger wynik = 1;
-            Console.WriteLine("Witam w programie do liczenia silni. \n\nProszę podać liczbę, do oblicznenia: ");
-            int podstawa = int.Parse(Console.ReadLine());
+            BigInteger wynik = 0;
+            Console.WriteLine("Witam w programie do mnożenia liczb. \n\nProszę podać pierwszą liczbę do mnożenia: ");
+            int liczba1 = int.Parse(Console.ReadLine());
 
-            for (int i = 1; i <= podstawa; i++)
-            {
-                wynik *= i;
-            }
+            Console.WriteLine("Proszę podać drugą liczbę: ");
+            int liczba2 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Silnia o podstawie: " + podstawa + " daje wynik: " + wynik);
+            wynik = liczba1 * liczba2;
+
+            Console.WriteLine("Wynik mnożenia to: " + wynik);
 
             Console.ReadLine();
         }
