@@ -9,7 +9,7 @@ namespace WSB_C_2020_Z1
         {
             BigInteger wynik = 0;
             Console.WriteLine("Witam w kalkulatorze. " +
-                "\nProszę wybrać typ działania z listy: " +
+                "\n\nProszę wybrać typ działania z listy: " +
                 "\n1 - Dodawanie" +
                 "\n2 - Odejmowanie" +
                 "\n3 - Mnożenie." +
