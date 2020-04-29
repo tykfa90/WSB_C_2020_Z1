@@ -26,15 +26,15 @@ namespace WSB_C_2020_Z1
             {
                 case "1":
                     Console.WriteLine("Wybrano dodawanie.");
-                    wynik = liczba1 + liczba2;
+                    wynik = Kalkulator.Dodawanie(liczba1, liczba2);
                     break;
                 case "2":
                     Console.WriteLine("Wybrano odejmowanie.");
-                    wynik = liczba1 - liczba2;
+                    wynik = Kalkulator.Odejmowanie(liczba1, liczba2);
                     break;
                 case "3":
                     Console.WriteLine("Wybrano mnożenie.");
-                    wynik = liczba1 * liczba2;
+                    wynik = Kalkulator.Mnozenie(liczba1, liczba2);
                     break;
                 case "4":
                     Console.WriteLine("Wybrano dzielenie.");
@@ -43,9 +43,11 @@ namespace WSB_C_2020_Z1
                         Console.WriteLine("Dzielenie przez zero nie jest możliwe! Proszę wybrać inną liczbę: ");
                         liczba2 = int.Parse(Console.ReadLine());
                     }
-                    wynik = liczba1 / liczba2;
+                    wynik = Kalkulator.Dzielenie(liczba1, liczba2);
                     break;
                 default:
+                    Console.WriteLine("Nieprawidłowe polecenie.");
+                    Console.ReadLine();
                     break;
             }
 
